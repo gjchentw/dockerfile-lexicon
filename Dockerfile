@@ -1,7 +1,7 @@
 FROM gjchen/alpine:latest
 
 RUN	apk --no-cache --no-progress upgrade -f && \
-	apk --no-cache --no-progress add python2 && \
+	apk --no-cache --no-progress add python2 curl && \
 	apk --no-cache --no-progress add --virtual build-deps py2-pip git gcc python2-dev musl-dev libffi-dev openssl-dev && \
 	pip install requests[security] dns-lexicon && \
 	git clone --depth 1 https://github.com/lukas2511/dehydrated.git /srv/dehydrated && \
