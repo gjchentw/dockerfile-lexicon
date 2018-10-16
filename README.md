@@ -27,9 +27,6 @@ docker run -d --name lexicon \
     -e PROVIDER=cloudflare \
     -e LEXICON_CLOUDFLARE_USERNAME=username@example.com \
     -e LEXICON_CLOUDFLARE_TOKEN=234dcef90c3d9aa0eb6798e16bdc1e4b \
-    -e PROVIDER=cloudflare \
-    -e LEXICON_CLOUDFLARE_USERNAME=username@example.com \
-    -e LEXICON_CLOUDFLARE_TOKEN=234dcef90c3d9aa0eb6798e16bdc1e4b \
     -v $(pwd)/accounts:/srv/dehydrated/accounts \
     -v $(pwd)/domains.txt:/srv/dehydrated/domains.txt \
     -v $(pwd)/certs:/srv/dehydrated/certs \
