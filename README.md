@@ -1,6 +1,6 @@
 # Alpine Linux with dehydrated and lexicon installed
 
-* [dehydrated](https://https://dehydrated.io)
+* [dehydrated](https://dehydrated.io)
 * [lexicon](https://github.com/AnalogJ/lexicon)
 
 Start a service:
