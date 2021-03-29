@@ -5,7 +5,7 @@
 
 Accept terms of service:
 ```
-docker run -it -v $(pwd)/accounts:/srv/dehydrated/accounts gjchen/lexicon /srv/dehydrated/dehydrated --register --accept-terms
+docker run -it -v $(pwd)/accounts:/srv/dehydrated/accounts ghcr.io/gjchentw/lexicon /srv/dehydrated/dehydrated --register --accept-terms
 ```
 
 Generate:
@@ -17,7 +17,7 @@ docker run -it \
     -v $(pwd)/accounts:/srv/dehydrated/accounts \
     -v $(pwd)/domains.txt:/srv/dehydrated/domains.txt \
     -v $(pwd)/certs:/srv/dehydrated/certs \
-    gjchen/lexicon /srv/dehydrated/dehydrated --cron --hook /srv/dehydrated/dehydrated.default.sh --challenge dns-01
+    ghcr.io/gjchentw/lexicon /srv/dehydrated/dehydrated --cron --hook /srv/dehydrated/dehydrated.default.sh --challenge dns-01
 ```
 
 Start a service:
@@ -30,6 +30,6 @@ docker run -d --name lexicon \
     -v $(pwd)/accounts:/srv/dehydrated/accounts \
     -v $(pwd)/domains.txt:/srv/dehydrated/domains.txt \
     -v $(pwd)/certs:/srv/dehydrated/certs \
-    gjchen/lexicon
+    ghcr.io/gjchentw/lexicon
 
 ```
