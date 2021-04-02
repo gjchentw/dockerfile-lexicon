@@ -11,9 +11,7 @@ on:
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
@@ -24,18 +22,17 @@ jobs:
       run: "docker push ghcr.io/gjchentw/lexicon:latest"
     - uses: actions/github-script@v3
       with:
-        github-token: ${secrets.CR_PAT}
+        github-token: ${{secrets.CR_PAT}}
         script: |
           const i = await github.issues.create({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            title: 'Actions Need Activities'
+            title: 'Actions Need Activities',
             body: 'cheers',
             labels: ['actions']
           })
-          console.log(i)
           github.issues.update({
-            issue_number: i.number,
+            issue_number: i.data.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
             state: 'closed'
